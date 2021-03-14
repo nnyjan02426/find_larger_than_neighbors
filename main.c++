@@ -58,18 +58,18 @@ int main(){
     while(con){
         cout << endl; //This line is only added for aesthetic
         int r=0, c=0;
+        bool input_pass = 0;
         int pass_nums = 0;
 
         //User enter the row and column counts of the two-dimensional array
-        while(r==0){
+        while(!input_pass){
             cout << "Please enter two integers: ";
             cin >> r >> c;
             if(((r>0)&&(r<100)) && ((c>0)&&(c<100))){
-                break;
+                input_pass = 1;
             }
             else{
                 cout << "The integers must be higher than 0, lower than 100." << endl;
-                r = 0;
             }
         }
         
